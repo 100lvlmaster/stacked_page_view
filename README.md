@@ -29,6 +29,7 @@ PageView.builder(
           );
         },
       )
+
 ```
 
 ![example gif](https://media.giphy.com/media/SanwUb4qh2h8RmOTRH/giphy.gif)
