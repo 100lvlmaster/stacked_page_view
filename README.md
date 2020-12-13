@@ -1,14 +1,30 @@
-# stacked_page_view
+# Stacked Page View!
 
-A new Flutter package project.
+Hi! This package will create stacked page view in your flutter app.
+ it's as **lightweight** as it can get⚡⚡ . 
 
-## Getting Started
-
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+ - Just wrap it between your PageView builder and the iterable children like the code below.
+ ```
+ PageView.builder(
+    itemCount:  10,
+    scrollDirection:  Axis.vertical,
+    controller: pageController,
+    itemBuilder: (context, index) {
+    return  StackPageView(                <<<<
+    controller: pageController,           <<<<
+    index: index,                         <<<<
+    child:  Container(                    
+    color: (colors..shuffle()).first,
+    child:  Center(
+		    child:  Text( '$index',
+	    style:  TextStyle(
+		    color:  Colors.white,
+		    fontSize:  25,
+               ),
+            ),
+           ),
+	      ),
+	     );
+	   },
+    )
+ ```
