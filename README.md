@@ -23,11 +23,11 @@ it's as **lightweight** as it can get⚡⚡ .
 		    color:  Colors.white,
 		    fontSize:  25,
 
-              ),
+            	),
            ),
           ),
-	      ),
-	     );
-	   },
+	 ),
+       );
+     },
    )
 ```
