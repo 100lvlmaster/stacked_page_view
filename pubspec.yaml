@@ -1,8 +1,7 @@
 name: stacked_page_view
 description: A flutter plugin to add vertical carousel
-version: 0.0.1
-author: 100lvlmaster
-homepage:
+version: 1.0.0
+homepage: https://github.com/100lvlmaster/stacked_page_view
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

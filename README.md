@@ -1,10 +1,11 @@
 # Stacked Page View!
 
 Hi! This package will create stacked page view in your flutter app.
- it's as **lightweight** as it can get⚡⚡ . 
+it's as **lightweight** as it can get⚡⚡ .
 
- - Just wrap it between your PageView builder and the iterable children like the code below.
- ```
+- Just wrap it between your PageView builder and the iterable children like the code below.
+
+```
  PageView.builder(
     itemCount:  10,
     scrollDirection:  Axis.vertical,
@@ -16,15 +17,17 @@ Hi! This package will create stacked page view in your flutter app.
     child:  Container(                    
     color: (colors..shuffle()).first,
     child:  Center(
+
 		    child:  Text( '$index',
 	    style:  TextStyle(
 		    color:  Colors.white,
 		    fontSize:  25,
-               ),
-            ),
+
+              ),
            ),
+          ),
 	      ),
 	     );
 	   },
-    )
- ```
+   )
+```
