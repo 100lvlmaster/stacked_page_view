@@ -9,8 +9,8 @@
 .history
 .svn/
 # hide test directory
-test_app
 test
+example
 # IntelliJ related
 *.iml
 *.ipr
