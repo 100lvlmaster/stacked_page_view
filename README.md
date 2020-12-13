@@ -7,25 +7,26 @@ it's as **lightweight** as it can get⚡⚡ .
 
 ```
 PageView.builder(
-   itemCount:  10,
-   scrollDirection:  Axis.vertical,
-   controller: pageController,
-   itemBuilder: (context, index) {
-   return  StackPageView(                <<<<
-   controller: pageController,           <<<<
-   index: index,                         <<<<
-   child:  Container(
-   color: (colors..shuffle()).first,
-   child:  Center(
-		    child:  Text( '$index',
-	    style:  TextStyle(
-		    color:  Colors.white,
-		    fontSize:  25,
+        itemCount: 10,
+        scrollDirection: Axis.vertical,
+        controller: pageController,
+        itemBuilder: (context, index) {
+          return StackPageView(
+            controller: pageController,
+            index: index,
+            child: Container(
+              color: (colors..shuffle()).first,
+              child: Center(
+                child: Text(
+                  '$index',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                  ),
+                ),
               ),
-           ),
-          ),
-	      ),
-	     );
-	   },
-   )
+            ),
+          );
+        },
+      )
 ```
