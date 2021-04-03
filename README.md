@@ -1,3 +1,5 @@
+[pub.dev/stacked_page_view](https://pub.dev/packages/stacked_page_view)
+
 # Stacked Page View!
 
 Hi! This package will create stacked page view in your flutter app.
