@@ -1,6 +1,9 @@
-[pub.dev/stacked_page_view](https://pub.dev/packages/stacked_page_view)
-
 # Stacked Page View!
+
+![flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+
+### [pub.dev/stacked_page_view](https://pub.dev/packages/stacked_page_view)
 
 Hi! This package will create stacked page view in your flutter app.
 it's as **lightweight** as it can get⚡⚡ .
