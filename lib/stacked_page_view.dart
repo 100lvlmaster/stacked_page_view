@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 /// A Calculator.
 class StackPageView extends StatefulWidget {
   StackPageView({
-    Key key,
-    this.index,
-    this.controller,
-    this.child,
-  })  : assert(index != null),
+    Key? key,
+    required this.index,
+    required this.controller,
+    required this.child,
+  })   : assert(index != null),
         assert(child != null),
         assert(controller != null),
         super(key: key);
@@ -38,8 +38,9 @@ class _StackPageViewState extends State<StackPageView> {
   _listener() {
     if (this.mounted)
       setState(() {
-        pagePosition = num.parse(widget.controller.page.toStringAsFixed(4));
-        currentPosition = widget.controller.page.floor();
+        pagePosition =
+            num.parse(widget.controller.page!.toStringAsFixed(4)) as double;
+        currentPosition = widget.controller.page!.floor();
       });
   }
 
