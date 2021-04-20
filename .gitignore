@@ -10,7 +10,6 @@
 .svn/
 # hide test directory
 test
-example
 # IntelliJ related
 *.iml
 *.ipr
