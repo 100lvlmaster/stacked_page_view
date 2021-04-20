@@ -10,10 +10,7 @@ class StackPageView extends StatefulWidget {
     required this.index,
     required this.controller,
     required this.child,
-  })   : assert(index != null),
-        assert(child != null),
-        assert(controller != null),
-        super(key: key);
+  }) : super(key: key);
   final int index;
   final PageController controller;
   final Widget child;
