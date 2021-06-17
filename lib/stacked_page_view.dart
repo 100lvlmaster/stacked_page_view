@@ -53,7 +53,6 @@ class _StackPageViewState extends State<StackPageView> {
   @override
   Widget build(BuildContext context) {
     final double padding = 15.0;
-
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: widget.backgroundColor,
@@ -82,9 +81,10 @@ class _StackPageViewState extends State<StackPageView> {
               child: ColorFiltered(
                 colorFilter: currentPosition != widget.index
                     ? ColorFilter.mode(
-                        widget.backgroundColor.withOpacity(anotheropac), BlendMode.darken)
-                    : ColorFilter.mode(
-                        widget.backgroundColor.withOpacity(0.01), BlendMode.darken),
+                        widget.backgroundColor.withOpacity(anotheropac),
+                        BlendMode.darken)
+                    : ColorFilter.mode(widget.backgroundColor.withOpacity(0.01),
+                        BlendMode.darken),
                 child: ClipRRect(
                   child: Transform.translate(
                     offset: currentPosition != widget.index

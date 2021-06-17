@@ -1,6 +1,6 @@
 name: stacked_page_view
 description: A flutter plugin to help create a vertical caraousel. This package is very lightweight as the actual code iteself is like 109 lines
-version: 1.1.1
+version: 1.1.2
 homepage: https://github.com/100lvlmaster/stacked_page_view
 
 environment:
