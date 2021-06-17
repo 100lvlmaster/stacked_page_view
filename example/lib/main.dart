@@ -24,7 +24,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   //
-  final PageController pageController = PageController();
+  PageController pageController;
   // Some RGB bling
   final List<Color> colors = <Color>[
     Colors.red,
@@ -35,6 +35,12 @@ class _MyHomePageState extends State<MyHomePage> {
     Colors.orange
   ];
   //
+  @override
+  void initState() {
+    pageController = PageController();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
