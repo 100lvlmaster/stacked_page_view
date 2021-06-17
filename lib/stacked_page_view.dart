@@ -10,10 +10,14 @@ class StackPageView extends StatefulWidget {
     required this.index,
     required this.controller,
     required this.child,
+    this.animationAxis = Axis.vertical,
+    this.backgroundColor = Colors.black,
   }) : super(key: key);
   final int index;
   final PageController controller;
   final Widget child;
+  final Axis animationAxis;
+  final Color backgroundColor;
   @override
   _StackPageViewState createState() => _StackPageViewState();
 }
@@ -52,11 +56,13 @@ class _StackPageViewState extends State<StackPageView> {
 
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: widget.backgroundColor,
       body: LayoutBuilder(
         builder: (context, constraints) {
           double delta = pagePosition - widget.index;
-          double start = (size.height * 0.105) * delta.abs() * 10;
+          double start = widget.animationAxis == Axis.horizontal
+              ? (size.width * 0.105) * delta.abs() * 10
+              : (size.height * 0.105) * delta.abs() * 10;
           double sides = padding * max(-delta, 0.0);
           double opac = (sides / 0.5) * 0.1;
           double anotheropac = 0.0;
@@ -76,13 +82,15 @@ class _StackPageViewState extends State<StackPageView> {
               child: ColorFiltered(
                 colorFilter: currentPosition != widget.index
                     ? ColorFilter.mode(
-                        Colors.black.withOpacity(anotheropac), BlendMode.darken)
+                        widget.backgroundColor.withOpacity(anotheropac), BlendMode.darken)
                     : ColorFilter.mode(
-                        Colors.black.withOpacity(0.01), BlendMode.darken),
+                        widget.backgroundColor.withOpacity(0.01), BlendMode.darken),
                 child: ClipRRect(
                   child: Transform.translate(
                     offset: currentPosition != widget.index
-                        ? Offset(0, -start)
+                        ? (widget.animationAxis == Axis.horizontal
+                            ? Offset(start, 0)
+                            : Offset(0, -start))
                         : Offset(0, 0),
                     child: ClipRRect(
                       borderRadius: currentPosition != widget.index
