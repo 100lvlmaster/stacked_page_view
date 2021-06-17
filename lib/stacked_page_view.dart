@@ -10,10 +10,12 @@ class StackPageView extends StatefulWidget {
     required this.index,
     required this.controller,
     required this.child,
+    this.backgroundColor = Colors.black,
   }) : super(key: key);
   final int index;
   final PageController controller;
   final Widget child;
+  final Color backgroundColor;
   @override
   _StackPageViewState createState() => _StackPageViewState();
 }
@@ -52,7 +54,7 @@ class _StackPageViewState extends State<StackPageView> {
 
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: widget.backgroundColor,
       body: LayoutBuilder(
         builder: (context, constraints) {
           double delta = pagePosition - widget.index;
@@ -76,9 +78,9 @@ class _StackPageViewState extends State<StackPageView> {
               child: ColorFiltered(
                 colorFilter: currentPosition != widget.index
                     ? ColorFilter.mode(
-                        Colors.black.withOpacity(anotheropac), BlendMode.darken)
+                        widget.backgroundColor.withOpacity(anotheropac), BlendMode.darken)
                     : ColorFilter.mode(
-                        Colors.black.withOpacity(0.01), BlendMode.darken),
+                        widget.backgroundColor.withOpacity(0.01), BlendMode.darken),
                 child: ClipRRect(
                   child: Transform.translate(
                     offset: currentPosition != widget.index
