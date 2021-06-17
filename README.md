@@ -10,7 +10,7 @@ it's as **lightweight** as it can get⚡⚡ .
 
 - Just wrap it between your PageView builder and the iterable children like the code below.
 
-```
+```dart
 PageView.builder(
         itemCount: 10,
         scrollDirection: Axis.vertical,
@@ -34,7 +34,6 @@ PageView.builder(
           );
         },
       )
-
 ```
 
 ![example gif](https://media.giphy.com/media/SanwUb4qh2h8RmOTRH/giphy.gif)
